@@ -8,15 +8,15 @@ const VisaService = () => {
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
             {/* Hero Section */}
-            <div className='flex items-center py-4 px-15 text-lg'>
+            <div className='flex items-center py-4 px-2 lg:px-15 text-lg'>
                 <Link to='/' className='flex items-center hover:underline '> Home  <IoIosArrowForward /> </Link><span className='text-blue-600'>Visa Services</span>
             </div>
             <div className="relative bg-gradient-to-r from-blue-800 to-indigo-900 py-16 md:py-24">
                 <div className="absolute inset-0 bg-black opacity-40"></div>
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="max-w-3xl mx-auto text-center">
-                        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Global <span className='text-purple-600'>Visa</span> Services</h1>
-                        <p className="text-xl text-blue-100 mb-8">Expert guidance for your international travel needs</p>
+                        <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">Global <span className='text-purple-600'>Visa</span> Services</h1>
+                        <p className="lg:text-xl text-blue-100 mb-8">Expert guidance for your international travel needs</p>
 
                     </div>
                 </div>
@@ -25,7 +25,7 @@ const VisaService = () => {
             {/* Cards Section */}
             <div className="container mx-auto py-12 px-4">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold text-gray-800 mb-4">Popular Visa Destinations</h2>
+                    <h2 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-4">Popular Visa Destinations</h2>
                     <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
                     <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
                         Explore visa requirements and fees for our most requested countries

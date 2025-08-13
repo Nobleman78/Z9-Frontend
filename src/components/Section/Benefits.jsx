@@ -30,8 +30,8 @@ const Benefits = () => {
             <section className="py-16 px-4">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-gray-800 mb-4">Why <span className="text-blue-500">Travel</span> With Us</h2>
-                        <p className="text-gray-600 max-w-3xl mx-auto text-lg">
+                        <h2 className="text-2xl lg:text-4xl font-bold text-gray-800 mb-4">Why <span className="text-blue-500">Travel</span> With Us</h2>
+                        <p className="text-gray-600 max-w-3xl mx-auto lg:text-lg">
                             We're committed to providing exceptional travel experiences that exceed your expectations
                         </p>
                     </div>
@@ -42,7 +42,7 @@ const Benefits = () => {
                                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-5">
                                     <img src={benefit.icon} alt={benefit.title} className="w-8 h-8" />
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-800 mb-3">{benefit.title}</h3>
+                                <h3 className="text-lg lg:text-xl font-bold text-gray-800 mb-3">{benefit.title}</h3>
                                 <p className="text-gray-600">{benefit.description}</p>
                             </div>
                         ))}

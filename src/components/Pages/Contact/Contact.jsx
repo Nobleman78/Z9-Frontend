@@ -40,7 +40,7 @@ const Contact = () => {
                         <Lottie animationData={contactLottie}></Lottie>
                     </div>
                     <div className='w-full md:w-1/2 mt-5 bg-sky-500 text-white px-5 lg:px-20 py-5  rounded-3xl' >
-                        <h2 className='text-4xl font-semibold'>Contact Information</h2>
+                        <h2 className='text-3xl lg:text-4xl font-semibold'>Contact Information</h2>
                         <div className='flex flex-col gap-3 mt-7 text-md'>
                             <p className='flex items-center gap-3'><GrLocation /> Gharisar, naria, shariatpur, Dhaka, Bangladesh</p>
                             <p className='flex items-center gap-3'><TbPhoneCall /> +8801710-411019</p>

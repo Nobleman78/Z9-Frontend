@@ -39,7 +39,7 @@ const BlogDetails = () => {
         return (
             <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
                 <div className="max-w-md w-full bg-white rounded-xl shadow-lg p-8 text-center">
-                    <h1 className="text-3xl font-bold text-red-500 mb-4">404 - Blog Post Not Found</h1>
+                    <h1 className="text-xl lg:text-3xl font-bold text-red-500 mb-4">404 - Blog Post Not Found</h1>
                     <p className="text-gray-600 mb-6">{error}</p>
                     <p className="text-gray-500 mb-6">Please check the URL or return to the blog listing.</p>
                     <button

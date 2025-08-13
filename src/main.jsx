@@ -4,26 +4,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.jsx'
 import Preloader from './components/Utility/Preloader'
 import './index.css'
-import Login from './components/Account/Login.jsx'
-import Registration from './components/Account/Registration.jsx'
 import AuthProvider from './components/ContextApi/AuthProvider.jsx'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import Dashboard from './components/Pages/Dashboard/Dashboard.jsx'
-import DashboardHome from './components/Pages/Dashboard/DashboardPages/Home/Home.jsx'
-import ManageBlogs from './components/Pages/Dashboard/DashboardPages/Blogs/ManageBlogs.jsx'
-import AddBlog from './components/Pages/Dashboard/DashboardPages/Blogs/AddBlogs.jsx'
-import UpdateBlog from './components/Pages/Dashboard/DashboardPages/Blogs/UpdateBlog.jsx'
-import ManageVisa from './components/Pages/Dashboard/DashboardPages/Visa/ManageVisa.jsx'
-import UpdateVisa from './components/Pages/Dashboard/DashboardPages/Visa/UpdateVisa.jsx'
-import AddVisa from './components/Pages/Dashboard/DashboardPages/Visa/AddVisa.jsx'
-import ManageDomestik from './components/Pages/Dashboard/DashboardPages/Domestic/ManageDomestik.jsx'
-import AddDomestic from './components/Pages/Dashboard/DashboardPages/Domestic/AddDomestic.jsx'
-import UpdateDomestic from './components/Pages/Dashboard/DashboardPages/Domestic/UpdateDomestic.jsx'
-import ManageInternational from './components/Pages/Dashboard/DashboardPages/International/ManageInternational.jsx'
-import AddInternational from './components/Pages/Dashboard/DashboardPages/International/AddInternational.jsx'
-import UpdateInternational from './components/Pages/Dashboard/DashboardPages/International/UpdateInternational.jsx'
-import User from './components/Pages/Dashboard/DashboardPages/User/User.jsx'
-
 
 const Home = lazy(() => import('./components/Pages/Home/Home'))
 const VisaService = lazy(() => import('./components/Pages/Visa/VisaService'))
@@ -39,6 +21,26 @@ const Blog = lazy(() => import('./components/Pages/Blog/Blog'))
 const TourPackages = lazy(() => import('./components/Pages/TourPack/TourPackages'))
 const BlogDetailes = lazy(() => import('./components/Pages/Blog/BlogDetailes'))
 const News = lazy(() => import('./components/Pages/News/News'))
+const Login = lazy(() => import('./components/Account/Login.jsx'))
+const Registration = lazy(() => import('./components/Account/Registration.jsx'))
+
+// Lazy load all Dashboard and Dashboard-related components
+const Dashboard = lazy(() => import('./components/Pages/Dashboard/Dashboard.jsx'))
+const DashboardHome = lazy(() => import('./components/Pages/Dashboard/DashboardPages/Home/Home.jsx'))
+const ManageBlogs = lazy(() => import('./components/Pages/Dashboard/DashboardPages/Blogs/ManageBlogs.jsx'))
+const AddBlog = lazy(() => import('./components/Pages/Dashboard/DashboardPages/Blogs/AddBlogs.jsx'))
+const UpdateBlog = lazy(() => import('./components/Pages/Dashboard/DashboardPages/Blogs/UpdateBlog.jsx'))
+const ManageVisa = lazy(() => import('./components/Pages/Dashboard/DashboardPages/Visa/ManageVisa.jsx'))
+const UpdateVisa = lazy(() => import('./components/Pages/Dashboard/DashboardPages/Visa/UpdateVisa.jsx'))
+const AddVisa = lazy(() => import('./components/Pages/Dashboard/DashboardPages/Visa/AddVisa.jsx'))
+const ManageDomestik = lazy(() => import('./components/Pages/Dashboard/DashboardPages/Domestic/ManageDomestik.jsx'))
+const AddDomestic = lazy(() => import('./components/Pages/Dashboard/DashboardPages/Domestic/AddDomestic.jsx'))
+const UpdateDomestic = lazy(() => import('./components/Pages/Dashboard/DashboardPages/Domestic/UpdateDomestic.jsx'))
+const ManageInternational = lazy(() => import('./components/Pages/Dashboard/DashboardPages/International/ManageInternational.jsx'))
+const AddInternational = lazy(() => import('./components/Pages/Dashboard/DashboardPages/International/AddInternational.jsx'))
+const UpdateInternational = lazy(() => import('./components/Pages/Dashboard/DashboardPages/International/UpdateInternational.jsx'))
+const User = lazy(() => import('./components/Pages/Dashboard/DashboardPages/User/User.jsx'))
+
 
 const router = createBrowserRouter([
   {
@@ -111,59 +113,59 @@ const router = createBrowserRouter([
         children: [
           {
             path: '/dashboard/home',
-            element: <DashboardHome />
+            element: <Suspense fallback={<Preloader />}><DashboardHome /></Suspense>
           },
           {
             path: '/dashboard/manageblog',
-            element: <ManageBlogs />
+            element: <Suspense fallback={<Preloader />}><ManageBlogs /></Suspense>
           },
           {
             path: '/dashboard/addblog',
-            element: <AddBlog />
+            element: <Suspense fallback={<Preloader />}><AddBlog /></Suspense>
           },
           {
             path: '/dashboard/updateblog/:id',
-            element: <UpdateBlog />
+            element: <Suspense fallback={<Preloader />}><UpdateBlog /></Suspense>
           },
           {
-            path:'/dashboard/managevisa',
-            element:<ManageVisa/>
+            path: '/dashboard/managevisa',
+            element: <Suspense fallback={<Preloader />}><ManageVisa /></Suspense>
           },
           {
-            path:'/dashboard/addvisa',
-            element:<AddVisa/>
+            path: '/dashboard/addvisa',
+            element: <Suspense fallback={<Preloader />}><AddVisa /></Suspense>
           },
           {
-            path:'/dashboard/updatevisa/:id',
-            element:<UpdateVisa/>
+            path: '/dashboard/updatevisa/:id',
+            element: <Suspense fallback={<Preloader />}><UpdateVisa /></Suspense>
           },
           {
-            path:'/dashboard/managedomestic',
-            element:<ManageDomestik/>
+            path: '/dashboard/managedomestic',
+            element: <Suspense fallback={<Preloader />}><ManageDomestik /></Suspense>
           },
           {
-            path:'/dashboard/adddomestic',
-            element:<AddDomestic/>
+            path: '/dashboard/adddomestic',
+            element: <Suspense fallback={<Preloader />}><AddDomestic /></Suspense>
           },
           {
-            path:'/dashboard/updatedomestic/:id',
-            element:<UpdateDomestic/>
+            path: '/dashboard/updatedomestic/:id',
+            element: <Suspense fallback={<Preloader />}><UpdateDomestic /></Suspense>
           },
           {
-            path:'/dashboard/manageinternational',
-            element:<ManageInternational/>
+            path: '/dashboard/manageinternational',
+            element: <Suspense fallback={<Preloader />}><ManageInternational /></Suspense>
           },
           {
-            path:'/dashboard/addinternational',
-            element:<AddInternational/>
+            path: '/dashboard/addinternational',
+            element: <Suspense fallback={<Preloader />}><AddInternational /></Suspense>
           },
           {
-            path:'/dashboard/updateinternational/:id',
-            element:<UpdateInternational/>
+            path: '/dashboard/updateinternational/:id',
+            element: <Suspense fallback={<Preloader />}><UpdateInternational /></Suspense>
           },
           {
-            path:'/dashboard/users',
-            element:<User/> 
+            path: '/dashboard/users',
+            element: <Suspense fallback={<Preloader />}><User /></Suspense>
           }
         ]
       },

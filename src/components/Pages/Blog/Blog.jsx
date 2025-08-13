@@ -6,13 +6,13 @@ const Blog = () => {
     const [blogs] = UseBlogs()
     return (
         <div>
-            <div className="flex items-center py-4 px-15 text-lg bg-gray-50">
+            <div className="flex items-center py-4 px-2 lg:px-15 text-lg bg-gray-50">
                 <Link to='/' className='flex items-center hover:underline text-gray-600 '>
                     Home <IoIosArrowForward className="mx-1" />
                 </Link>
                 <span className='text-blue-600 ml-1'>Blog</span>
             </div>
-            <div className="px-15">
+            <div className="lg:px-15 px-2 mt-2">
                 <h1 className="text-3xl font-bold mb-8">Travel Blogs</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
                     {blogs.map((blog) => (
