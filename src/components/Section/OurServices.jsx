@@ -91,9 +91,9 @@ const OurServices = () => {
                 <div className="text-center mb-16">
                     <h2 
                         id="services-heading"
-                        className="text-3xl lg:text-6xl font-bold text-white mb-5 tracking-tight"
+                        className="text-3xl lg:text-5xl font-bold text-white mb-5 tracking-tight"
                     >
-                        <span className="text-sky-600">_Our</span> <span className="text-white px-2">Services</span><span>_</span>
+                        <span>_Our</span> <span className="text-white px-2">Services</span><span>_</span>
                     </h2>
                     <p className="text-white max-w-2xl mx-auto text-md lg:text-lg">
                         Comprehensive travel solutions designed to make your journey seamless and unforgettable
