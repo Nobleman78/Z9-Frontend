@@ -13,7 +13,7 @@ const Domestic = () => {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <section className="relative py-10 lg:py-20 flex items-center justify-center overflow-hidden">
+            <section className="relative py-20 flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10"></div>
                 <div className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                     style={{ backgroundImage: "url('https://images.unsplash.com/photo-1586348943529-beaae6c28db9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')" }}>
@@ -21,7 +21,7 @@ const Domestic = () => {
                 
                 {/* Enhanced responsive hero content with consistent spacing */}
                 <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full flex flex-col items-center justify-center gap-4 sm:gap-5">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white px-4">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white px-5 lg:px-10 w-[400px] lg:w-auto">
                         <span className="text-sky-600">Domestic</span> Tour Packages 
                     </h1>
                     <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mx-auto px-2">

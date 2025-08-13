@@ -14,7 +14,7 @@ const InternationalPackage = () => {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <section className="relative lg:py-3 flex items-center justify-center overflow-hidden">
+            <section className="relative py-10 flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10"></div>
                 <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -22,8 +22,8 @@ const InternationalPackage = () => {
                 
                 {/* Enhanced responsive hero content with consistent spacing */}
                 <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full flex flex-col items-center justify-center py-10">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-                        <span className='text-sky-600'>International</span> Tour Packages
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 px-5 w-[400px] lg:w-auto">
+                        <span className='text-sky-600 '>International</span> Tour Packages
                     </h1>
                     <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
                         Discover amazing destinations around the world with our exclusive international tour packages
