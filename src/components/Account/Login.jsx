@@ -4,7 +4,8 @@ import Lottie from 'lottie-react'
 import { useLocation, useNavigate } from 'react-router-dom';
 import UsePasswordToggle from '../Hooks/UsePasswordToggle';
 import AuthContext from '../ContextApi/AuthContext';
-import useAxiosPublic from '../Hooks/useAxiosPublic';
+import useAxiosPublic from '../Hooks/UseAxiosPublic';
+
 
 const Login = () => {
     const axiosPublic = useAxiosPublic()
