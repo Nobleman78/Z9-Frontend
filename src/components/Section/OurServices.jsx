@@ -94,7 +94,7 @@ const OurServices = () => {
                         className="text-3xl lg:text-5xl font-bold text-white mb-5 tracking-tight"
                     >
                         <span>_Our</span> <span className="text-white px-2">Services</span><span>_</span>
-                    </h2>
+                    </h2>   
                     <p className="text-white max-w-2xl mx-auto text-md lg:text-lg">
                         Comprehensive travel solutions designed to make your journey seamless and unforgettable
                     </p>
