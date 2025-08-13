@@ -4,7 +4,6 @@ import UseVisa from '../../Hooks/UseVisa';
 
 const VisaService = () => {
     const [visa] = UseVisa()
-    console.log(visa)
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
             {/* Hero Section */}
