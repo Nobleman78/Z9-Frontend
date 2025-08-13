@@ -61,7 +61,7 @@ const VisaDetailes = () => {
     }
 
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-gray-50 overflow-x-hidden">
             <div className='flex items-center py-4 px-2 lg:px-15 text-lg'>
                 <Link to='/' className='flex items-center hover:underline '> Home  <IoIosArrowForward /> </Link><span >Visa Services </span><IoIosArrowForward/><span className='text-blue-600'>{country.CountryName}</span>
             </div>
@@ -96,7 +96,7 @@ const VisaDetailes = () => {
                                 {Object.entries(country.Fees).map(([feeType, amount]) => (
                                     <div key={feeType} className="rounded-lg p-4 space-y-4 w-[500px]">
                                         <p className='text-xl font-semibold'>{country.CountryName} (<span>{country.Type}</span>)</p>
-                                        <div className='flex justify-between text-gray-600'>
+                                        <div className='flex flex-col lg:flex-row gap-4 justify-between text-gray-600'>
                                             <div>
                                                 <p>Validity</p>
                                                 <p className='text-black text-lg'>{country.Validity}</p>

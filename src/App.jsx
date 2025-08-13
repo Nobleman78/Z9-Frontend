@@ -25,7 +25,7 @@ function App() {
   }, [loading]);
 
   return (
-    <div className='flex flex-col min-h-screen'>
+    <div className='flex flex-col min-h-screen overflow-x-hidden'>
       {/* Only restore scroll AFTER preloader is done */}
       {restoreScroll && <ScrollRestoration />}
 
