@@ -137,7 +137,7 @@ const Footer = () => {
                         <p className="text-gray-500 mb-4 md:mb-0">© {new Date().getFullYear()} Company. All rights reserved.</p>
                         <div className="flex space-x-6">
                             {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((policy) => (
-                                <a key={policy} href="#" className="text-gray-500 hover:text-sky-700 transition-colors">
+                                <a key={policy} href="#" className="text-gray-700 hover:text-sky-700 transition-colors">
                                     {policy}
                                 </a>
                             ))}
