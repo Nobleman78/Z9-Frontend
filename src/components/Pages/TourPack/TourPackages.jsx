@@ -2,12 +2,16 @@ import { Link } from "react-router-dom";
 import { FaMapMarkerAlt, FaClock, FaMoneyBillWave, FaStar } from "react-icons/fa";
 import UseDomestic from "../../Hooks/UseDomestic";
 import UseInternational from "../../Hooks/UseInternational";
+import { Helmet } from "react-helmet-async";
 
 const TourPackages = () => {
     const [domestic] = UseDomestic()
     const [international] = UseInternational()
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4 sm:px-6 lg:px-8">
+            <Helmet>
+                <title>Tour Packages | Z9 Air Travels</title>
+            </Helmet>
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-12">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4"> Travel Packages</h1>

@@ -1,15 +1,52 @@
 import { Link } from "react-router-dom";
 import { FaMapMarkerAlt, FaClock, FaMoneyBillWave, FaStar } from "react-icons/fa";
 import UseDomestic from "../../Hooks/UseDomestic";
+import { Helmet } from "react-helmet-async";
 
 const Domestic = () => {
-    const [domestic] = UseDomestic()
+    const [domestic] = UseDomestic();
+    const pageUrl = "https://www.z9airtravels.com/domestic-packages";
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4 sm:px-6 lg:px-8">
+            <Helmet>
+                <title>Domestic Packages | Z9 Air Travels</title>
+                <meta
+                    name="description"
+                    content="Explore Bangladesh with Z9 Air Travels domestic travel packages. Discover curated itineraries, top destinations, and unforgettable experiences."
+                />
+                <meta
+                    name="keywords"
+                    content="domestic travel, Bangladesh tour, travel packages, Z9 Air Travels"
+                />
+                <link rel="canonical" href={pageUrl} />
+
+                {/* Open Graph */}
+                <meta property="og:title" content="Domestic Packages | Z9 Air Travels" />
+                <meta
+                    property="og:description"
+                    content="Discover the best domestic travel packages in Bangladesh with Z9 Air Travels. Personalized itineraries and top destinations."
+                />
+                <meta property="og:url" content={pageUrl} />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://www.z9airtravels.com/images/domestic-packages-og.jpg" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Domestic Packages | Z9 Air Travels" />
+                <meta
+                    name="twitter:description"
+                    content="Explore Bangladesh with our curated domestic travel packages. Personalized itineraries and top destinations."
+                />
+                <meta name="twitter:image" content="https://www.z9airtravels.com/images/domestic-packages-og.jpg" />
+            </Helmet>
+
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-12">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">Domestic Travel Packages</h1>
-                    <p className="text-lg text-gray-600 max-w-3xl mx-auto">Discover the beauty of Bangladesh with our curated travel experiences</p>
+                    <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                        Discover the beauty of Bangladesh with our curated travel experiences
+                    </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -18,7 +55,6 @@ const Domestic = () => {
                             key={pack.packageId}
                             className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
                         >
-                            {/* Package Image */}
                             <div className="relative h-48 overflow-hidden">
                                 <img
                                     src={pack.image}
@@ -31,7 +67,6 @@ const Domestic = () => {
                                 </div>
                             </div>
 
-                            {/* Package Content */}
                             <div className="p-6">
                                 <div className="flex justify-between items-start mb-3">
                                     <h2 className="text-xl font-bold text-gray-800">{pack.title}</h2>

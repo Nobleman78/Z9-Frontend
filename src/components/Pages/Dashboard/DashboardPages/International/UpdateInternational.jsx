@@ -19,7 +19,7 @@ const UpdateInternational = () => {
         highlights: '',
         inclusions: '',
         exclusions: '',
-        terms: ''
+        image: ''
     });
 
     const [loading, setLoading] = useState(true);
@@ -42,7 +42,7 @@ const UpdateInternational = () => {
                         highlights: packageData.highlights || '',
                         inclusions: packageData.inclusions || '',
                         exclusions: packageData.exclusions || '',
-                        terms: packageData.terms || ''
+                        image: packageData.image || ''
                     });
                 } else {
                     Swal.fire({
@@ -326,6 +326,24 @@ const UpdateInternational = () => {
                                 placeholder='Enter exclusions (one per line)'
                             ></textarea>
                         </div>
+
+                        {/* Image URL */}
+                        <div className='md:col-span-2'>
+                            <label className='block text-gray-700 font-medium mb-2' htmlFor='image'>
+                                Image URL <span className='text-red-500'>*</span>
+                            </label>
+                            <input
+                                type='text'
+                                id='image'
+                                name='image'
+                                value={formData.image}
+                                onChange={handleInputChange}
+                                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 ${errors.image ? 'border-red-500 focus:ring-red-200' : 'border-gray-300 focus:ring-sky-200'}`}
+                                placeholder='Enter image URL (https://example.com/image.jpg)'
+                            />
+                            {errors.image && <p className='mt-1 text-red-500 text-sm'>{errors.image}</p>}
+                        </div>
+
 
 
                     </div>

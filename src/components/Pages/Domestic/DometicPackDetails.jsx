@@ -13,7 +13,7 @@ const DomesticPackageDetails = () => {
         return (
             <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
                 <div className="text-center p-8 bg-white rounded-xl shadow-lg max-w-md">
-                    <div className="text-6xl mb-4">🚫</div>
+                    <div className="text-6xl mb-4"></div>
                     <h2 className="text-2xl font-bold text-gray-800 mb-2">Package Not Found</h2>
                     <p className="text-gray-600 mb-6">The package you're looking for doesn't exist or has been removed.</p>
                     <button

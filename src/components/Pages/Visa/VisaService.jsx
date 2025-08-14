@@ -1,23 +1,62 @@
 import { Link } from 'react-router-dom';
 import { IoIosArrowForward } from "react-icons/io";
 import UseVisa from '../../Hooks/UseVisa';
+import { Helmet } from 'react-helmet-async';
 
 const VisaService = () => {
-    const [visa] = UseVisa()
+    const [visa] = UseVisa();
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+            <Helmet>
+                <title>Visa Services | Z9 Air Travels</title>
+                <meta
+                    name="description"
+                    content="Explore global visa services with Z9 Air Travels. Get guidance for visa requirements, fees, and documentation for popular international destinations."
+                />
+                <meta
+                    name="keywords"
+                    content="Visa services, international travel, visa fees, visa application, Z9 Air Travels"
+                />
+                <link rel="canonical" href="https://www.z9airtravels.com/visa-services" />
+
+                {/* Open Graph */}
+                <meta property="og:title" content="Visa Services | Z9 Air Travels" />
+                <meta
+                    property="og:description"
+                    content="Expert guidance for international travel visas. Check visa requirements and fees for top destinations."
+                />
+                <meta property="og:url" content="https://www.z9airtravels.com/visa-services" />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://www.z9airtravels.com/images/visa-services-og.jpg" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Visa Services | Z9 Air Travels" />
+                <meta
+                    name="twitter:description"
+                    content="Get expert assistance for visa applications and travel documentation with Z9 Air Travels."
+                />
+                <meta name="twitter:image" content="https://www.z9airtravels.com/images/visa-services-og.jpg" />
+            </Helmet>
+
             {/* Hero Section */}
             <div className='flex items-center py-4 px-2 lg:px-15 text-lg'>
-                <Link to='/' className='flex items-center hover:underline '> Home  <IoIosArrowForward /> </Link><span className='text-blue-600'>Visa Services</span>
+                <Link to='/' className='flex items-center hover:underline'>
+                    Home <IoIosArrowForward /> 
+                </Link>
+                <span className='text-blue-600'>Visa Services</span>
             </div>
+
             <div className="relative bg-gradient-to-r from-blue-800 to-indigo-900 py-16 md:py-24">
                 <div className="absolute inset-0 bg-black opacity-40"></div>
-                <div className="container mx-auto px-4 relative z-10">
-                    <div className="max-w-3xl mx-auto text-center">
-                        <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">Global <span className='text-purple-600'>Visa</span> Services</h1>
-                        <p className="lg:text-xl text-blue-100 mb-8">Expert guidance for your international travel needs</p>
-
-                    </div>
+                <div className="container mx-auto px-4 relative z-10 text-center">
+                    <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+                        Global <span className='text-purple-600'>Visa</span> Services
+                    </h1>
+                    <p className="lg:text-xl text-blue-100 mb-8">
+                        Expert guidance for your international travel needs
+                    </p>
                 </div>
             </div>
 
@@ -33,7 +72,6 @@ const VisaService = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                     {visa.map((country) => {
-                        // Get the first fee type and amount for display
                         const firstFeeType = Object.keys(country.Fees)[0];
                         const firstFeeAmount = country.Fees[firstFeeType];
 
@@ -66,7 +104,6 @@ const VisaService = () => {
 
                                     <div className="mt-auto">
                                         <Link
-                                           
                                             to={`/visadetails/${encodeURIComponent(country.CountryName.replace(/\s+/g, '-').toLowerCase())}`}
                                             state={{ countryData: country }}
                                             className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition duration-300 text-center">
@@ -79,8 +116,8 @@ const VisaService = () => {
                     })}
                 </div>
 
-                <div className="mt-16 text-center ">
-                    <div className="bg-white rounded-xl shadow-md  lg:p-8 max-w-7xl mx-auto">
+                <div className="mt-16 text-center">
+                    <div className="bg-white rounded-xl shadow-md lg:p-8 max-w-7xl mx-auto">
                         <h3 className="text-2xl font-bold text-gray-800 mb-4 p-5 lg:p-0">Need Assistance?</h3>
                         <p className="text-gray-600 mb-6 px-5 lg:px-0">
                             Our visa experts are ready to help you with your application process

@@ -1,11 +1,14 @@
 import React, { lazy, Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
+import { HelmetProvider } from 'react-helmet-async'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.jsx'
 import Preloader from './components/Utility/Preloader'
 import './index.css'
 import AuthProvider from './components/ContextApi/AuthProvider.jsx'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import About from './components/Pages/About/About.jsx'
+import OurTeam from './components/Pages/About/OurTeam.jsx'
 
 const Home = lazy(() => import('./components/Pages/Home/Home'))
 const VisaService = lazy(() => import('./components/Pages/Visa/VisaService'))
@@ -108,6 +111,14 @@ const router = createBrowserRouter([
         element: <Suspense fallback={<Preloader />}><Registration /></Suspense>
       },
       {
+        path: 'about',
+        element: <About />
+      },
+      {
+        path: 'ourteam',
+        element: <OurTeam />
+      },
+      {
         path: 'dashboard',
         element: <Suspense fallback={<Preloader />}><Dashboard /></Suspense>,
         children: [
@@ -181,7 +192,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
-        <RouterProvider router={router} />
+        <HelmetProvider>
+          <RouterProvider router={router} />
+        </HelmetProvider>
       </AuthProvider>
     </QueryClientProvider>
   </React.StrictMode>,

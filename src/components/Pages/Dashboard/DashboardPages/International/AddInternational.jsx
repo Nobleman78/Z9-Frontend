@@ -18,7 +18,7 @@ const AddInternational = () => {
         highlights: '',
         inclusions: '',
         exclusions: '',
-        terms: ''
+        image: ''
     });
 
     const [loading, setLoading] = useState(false);
@@ -62,6 +62,12 @@ const AddInternational = () => {
         } else if (isNaN(formData.price) || parseInt(formData.price) <= 0) {
             newErrors.price = 'Price must be a positive number';
         }
+        if (!formData.image.trim()) {
+            newErrors.image = 'Image URL is required';
+        } else if (!/^https?:\/\/.+\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(formData.image.trim())) {
+            newErrors.image = 'Please enter a valid image URL';
+        }
+
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -218,7 +224,7 @@ const AddInternational = () => {
                             {errors.price && <p className='mt-1 text-red-500 text-sm'>{errors.price}</p>}
                         </div>
 
-                       
+
 
                         {/* Highlights */}
                         <div className='md:col-span-2'>
@@ -267,6 +273,24 @@ const AddInternational = () => {
                                 placeholder='Enter exclusions (one per line)'
                             ></textarea>
                         </div>
+
+                        {/* Image URL */}
+                        <div className='md:col-span-2'>
+                            <label className='block text-gray-700 font-medium mb-2' htmlFor='image'>
+                                Image URL <span className='text-red-500'>*</span>
+                            </label>
+                            <input
+                                type='text'
+                                id='image'
+                                name='image'
+                                value={formData.image}
+                                onChange={handleInputChange}
+                                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 ${errors.image ? 'border-red-500 focus:ring-red-200' : 'border-gray-300 focus:ring-sky-200'}`}
+                                placeholder='Enter image URL (https://example.com/image.jpg)'
+                            />
+                            {errors.image && <p className='mt-1 text-red-500 text-sm'>{errors.image}</p>}
+                        </div>
+
                     </div>
 
                     <div className='flex  mt-8 gap-3'>

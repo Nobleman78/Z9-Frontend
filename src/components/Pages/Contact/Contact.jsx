@@ -4,6 +4,7 @@ import { GrLocation } from 'react-icons/gr';
 import { TbPhoneCall } from 'react-icons/tb';
 import { AiOutlineMail } from 'react-icons/ai';
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const Contact = () => {
 
@@ -35,6 +36,9 @@ const Contact = () => {
     return (
         <div>
             <main className='lg:max-w-7xl mx-auto mb-5'>
+                <Helmet>
+                    <title>Contact | Z9 Air Travels</title>
+                </Helmet>
                 <div className='flex flex-col md:flex-row justify-between'>
                     <div className='w-full md:w-1/2' >
                         <Lottie animationData={contactLottie}></Lottie>

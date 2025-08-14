@@ -24,14 +24,14 @@ const paymentMethods = [
 const exploreUs = [
     { title: 'About Us', path: '/about' },
     { title: 'Our Team', path: '/ourteam' },
-    { title: 'Blog', path: '/blog' },
-    { title: 'Testimonials', path: '/testimonials' },
+    { title: 'Blog', path: '/blogs' },
+   
 
 ]
 const services = [
     { title: 'Visa Services', path: '/visaservices' },
     { title: 'Air Tickets', path: '/airticket' },
-    { title: 'Packages', path: '/package' },
+    { title: 'Packages', path: '/tourpackages' },
 ]
 
 const Footer = () => {
@@ -107,7 +107,7 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center">
                                 <FaEnvelope className="text-purple-500 mr-3" />
-                                <span>z9net@hotmail.com</span>
+                                <span>z9airtravels@gmail.com</span>
                             </li>
                         </ul>
                     </div>
