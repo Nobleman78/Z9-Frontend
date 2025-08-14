@@ -4,7 +4,8 @@ import Navbar from './components/Layout/Navbar';
 import Header from './components/Layout/Header';
 import Preloader from './components/Utility/Preloader';
 import { useEffect, useState } from 'react';
-import SEO from './components/SEO/Seo';
+import Seo from './components/SEO/Seo';
+
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
 
   return (
     <div className='flex flex-col min-h-screen overflow-x-hidden'>
-      <SEO
+      <Seo
         title="Travel Agency"
         description="Best travel agency offering visa services, air tickets, and tour packages worldwide."
         keywords="travel, visa, air ticket, tour packages, international travel"
