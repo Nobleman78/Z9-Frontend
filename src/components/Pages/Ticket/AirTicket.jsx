@@ -1,10 +1,23 @@
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
+import Preloader from "../../Utility/Preloader";
 
 const AirTicket = () => {
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+        const timer = setTimeout(() => setLoading(false), 1000);
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <div>
+            {loading && (
+                <div className="absolute inset-0 z-250 flex items-center justify-center bg-white bg-opacity-70">
+                    <Preloader />
+                </div>
+            )}
             <Helmet>
                 <title>Air Ticket | Z9 Air Travels</title>
                 <meta

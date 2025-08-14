@@ -2,12 +2,17 @@ import { Link } from 'react-router-dom';
 import { IoIosArrowForward } from "react-icons/io";
 import UseVisa from '../../Hooks/UseVisa';
 import { Helmet } from 'react-helmet-async';
+import Preloader from '../../Utility/Preloader';
 
 const VisaService = () => {
-    const [visa] = UseVisa();
-
+    const [visa, , , isFetching] = UseVisa();
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+            {isFetching && (
+                <div className="absolute inset-0 z-250 flex items-center justify-center bg-white bg-opacity-70">
+                    <Preloader />
+                </div>
+            )}
             <Helmet>
                 <title>Visa Services | Z9 Air Travels</title>
                 <meta
@@ -43,7 +48,7 @@ const VisaService = () => {
             {/* Hero Section */}
             <div className='flex items-center py-4 px-2 lg:px-15 text-lg'>
                 <Link to='/' className='flex items-center hover:underline'>
-                    Home <IoIosArrowForward /> 
+                    Home <IoIosArrowForward />
                 </Link>
                 <span className='text-blue-600'>Visa Services</span>
             </div>

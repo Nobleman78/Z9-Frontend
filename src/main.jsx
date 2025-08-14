@@ -118,6 +118,7 @@ const router = createBrowserRouter([
         path: 'ourteam',
         element: <OurTeam />
       },
+      
       {
         path: 'dashboard',
         element: <Suspense fallback={<Preloader />}><Dashboard /></Suspense>,

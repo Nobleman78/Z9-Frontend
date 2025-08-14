@@ -2,15 +2,21 @@ import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 import UseBlogs from "../../Hooks/UseBlogs";
 import { Helmet } from "react-helmet-async";
+import Preloader from "../../Utility/Preloader";
 
 const Blog = () => {
-    const [blogs] = UseBlogs()
+    const [blogs, , , isFetching] = UseBlogs()
     return (
         <div>
             <div className="flex items-center py-4 px-2 lg:px-15 text-lg bg-gray-50">
-               <Helmet>
-                <title>Blog | Z9 Air Travels</title>
-               </Helmet>
+                {isFetching && (
+                    <div className="absolute inset-0 z-250 flex items-center justify-center bg-white bg-opacity-70">
+                        <Preloader />
+                    </div>
+                )}
+                <Helmet>
+                    <title>Blog | Z9 Air Travels</title>
+                </Helmet>
                 <Link to='/' className='flex items-center hover:underline text-gray-600 '>
                     Home <IoIosArrowForward className="mx-1" />
                 </Link>

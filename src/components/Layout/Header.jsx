@@ -28,7 +28,7 @@ const Header = () => {
             <header className='flex bg-black text-white items-center justify-between px-2 lg:px-20 py-3'>
                 <div className='flex lg:w-1/2 lg:gap-10 gap-3 '>
                     <h2 className='flex items-center gap-2 lg:gap-5 text-xs lg:text-lg'><FaPhone className='text-sky-400' />+8801710-411019</h2>
-                    <p className='flex items-center gap-2 lg:gap-5 hover:text-gray-400 text-xs lg:text-lg'><FaEnvelope className='text-sky-400' />z9net@hotmail.com</p>
+                    <p className='flex items-center gap-2 lg:gap-5 hover:text-gray-400 text-xs lg:text-lg'><FaEnvelope className='text-sky-400' />z9airtravels@gmail.com</p>
                 </div>
                 <div className='w-1/2 justify-end gap-10 hidden lg:flex'>
                     {

@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-      setRestoreScroll(true); // Enable scroll restoration after preloader
+      setRestoreScroll(true);
     }, 1500);
     return () => clearTimeout(timer);
   }, []);
@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div className='flex flex-col min-h-screen overflow-x-hidden'>
-     
+
 
       {/* Only restore scroll AFTER preloader is done */}
       {restoreScroll && <ScrollRestoration />}

@@ -228,7 +228,7 @@ const VisaDetailes = () => {
                     </div>
                 </div>
                 <div className='bg-white rounded-xl shadow-lg overflow-hidden mt-12 p-8 '>
-                    <h2 className='text-2xl font-semibold mb-2'>Important Notes</h2>
+                    <h2 className='text-2xl font-semibold mb-2 text-red-600'>Important Notes</h2>
                     <p className='text-justify'>Please contact the Visa department for Document processing after the payment. Visa rate may change without any prior notice.</p>
                 </div>
             </div>

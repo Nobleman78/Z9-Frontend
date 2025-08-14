@@ -2,13 +2,19 @@ import { FaMapMarkerAlt, FaMoneyBillWave, FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import UseInternational from "../../Hooks/UseInternational";
 import { Helmet } from "react-helmet-async";
+import Preloader from "../../Utility/Preloader";
 
 const International = () => {
-    const [international] = UseInternational();
-    const pageUrl = "https://www.z9airtravels.com/international-packages";
+    const [international, , , isFetching] = UseInternational();
+    const pageUrl = "https://www.z9airtravels.com/international";
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4 sm:px-6 lg:px-8">
+            {isFetching && (
+                <div className="absolute inset-0 z-250 flex items-center justify-center bg-white bg-opacity-70">
+                    <Preloader />
+                </div>
+            )}
             <Helmet>
                 <title>International Packages | Z9 Air Travels</title>
                 <meta

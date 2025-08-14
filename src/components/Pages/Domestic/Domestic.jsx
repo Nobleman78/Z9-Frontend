@@ -2,13 +2,18 @@ import { Link } from "react-router-dom";
 import { FaMapMarkerAlt, FaClock, FaMoneyBillWave, FaStar } from "react-icons/fa";
 import UseDomestic from "../../Hooks/UseDomestic";
 import { Helmet } from "react-helmet-async";
+import Preloader from "../../Utility/Preloader";
 
 const Domestic = () => {
-    const [domestic] = UseDomestic();
-    const pageUrl = "https://www.z9airtravels.com/domestic-packages";
-
+    const [domestic, , , isFetching] = UseDomestic();
+    const pageUrl = "https://www.z9airtravels.com/domestic";
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4 sm:px-6 lg:px-8">
+            {isFetching && (
+                <div className="absolute inset-0 z-250 flex items-center justify-center bg-white bg-opacity-70">
+                    <Preloader />
+                </div>
+            )}
             <Helmet>
                 <title>Domestic Packages | Z9 Air Travels</title>
                 <meta

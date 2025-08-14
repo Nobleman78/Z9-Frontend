@@ -2,6 +2,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import { FaMapMarkerAlt, FaClock, FaMoneyBillWave, FaStar, FaCheck, FaTimes, FaArrowLeft } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 import UseDomestic from "../../Hooks/UseDomestic";
+import { Tooltip } from 'react-tooltip'
 
 const DomesticPackageDetails = () => {
     const [domestic] = UseDomestic()
@@ -158,11 +159,11 @@ const DomesticPackageDetails = () => {
                                 <div className="flex gap-3">
                                     <button
                                         onClick={() => navigate('/packages/domestic')}
-                                        className="px-6 py-3 border cursor-pointer border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-100 transition-colors duration-300"
-                                    >
+                                        className="px-6 py-3 border cursor-pointer border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-blue-500 hover:text-white transition-colors duration-300">
                                         View Other Packages
                                     </button>
-                                    <button className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-colors duration-300">
+                                    <Tooltip id="my-tooltip" />
+                                    <button data-tooltip-id="my-tooltip" data-tooltip-content='Online Booking Feature is not Available' className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-colors duration-300">
                                         Book Now
                                     </button>
                                 </div>
@@ -175,10 +176,11 @@ const DomesticPackageDetails = () => {
                         <h3 className="text-xl font-bold text-gray-800 mb-4">Need more information?</h3>
                         <p className="text-gray-600 mb-4">Our travel experts are available to help you with any questions about this package.</p>
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <button className="px-5 py-2.5 bg-indigo-100 text-indigo-700 font-medium rounded-lg hover:bg-indigo-200 transition-colors duration-300">
+                            <Link to='/contact' className="px-5 py-2.5 bg-indigo-500 text-white font-medium cursor-pointer rounded-lg hover:bg-indigo-600 transition-colors duration-300">
                                 Contact Us
-                            </button>
-                            <button className="px-5 py-2.5 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors duration-300">
+                            </Link>
+                            <Tooltip id="my-second-id"></Tooltip>
+                            <button data-tooltip-id="my-second-id" data-tooltip-content='Itinerary not added yet.' className="px-5 py-2.5 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors duration-300">
                                 Download Itinerary
                             </button>
                         </div>
