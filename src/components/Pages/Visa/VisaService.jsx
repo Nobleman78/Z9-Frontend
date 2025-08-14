@@ -3,6 +3,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import UseVisa from '../../Hooks/UseVisa';
 import { Helmet } from 'react-helmet-async';
 import Preloader from '../../Utility/Preloader';
+import { FaArrowDown } from "react-icons/fa6";
 
 const VisaService = () => {
     const [visa, , , isFetching] = UseVisa();
@@ -53,7 +54,7 @@ const VisaService = () => {
                 <span className='text-blue-600'>Visa Services</span>
             </div>
 
-            <div className="relative bg-gradient-to-r from-blue-800 to-indigo-900 py-16 md:py-24">
+            <div className="relative bg-gradient-to-r from-blue-400  to-indigo-900 py-16 md:py-24">
                 <div className="absolute inset-0 bg-black opacity-40"></div>
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
@@ -62,6 +63,7 @@ const VisaService = () => {
                     <p className="lg:text-xl text-blue-100 mb-8">
                         Expert guidance for your international travel needs
                     </p>
+                    <FaArrowDown className='flex items-center justify-center w-full text-4xl text-white animate-bounce' />
                 </div>
             </div>
 
