@@ -49,6 +49,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement:<div>Something went wrong please reload the page</div>,
     children: [
       {
         index: true,
@@ -118,7 +119,7 @@ const router = createBrowserRouter([
         path: 'ourteam',
         element: <OurTeam />
       },
-      
+
       {
         path: 'dashboard',
         element: <Suspense fallback={<Preloader />}><Dashboard /></Suspense>,

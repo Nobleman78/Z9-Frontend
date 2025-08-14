@@ -6,8 +6,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Z9 Travels | Affordable Air Tickets & Travel Packages</title>
-  <meta name="description" content="Book affordable air tickets and travel packages with Z9 Travels. Enjoy secure bookings, great deals, and top-notch customer service for your next journey." />
-  <meta name="keywords" content="Z9 Travels, air tickets, cheap flights, travel packages, flight booking, tours, holidays, airline deals" />
+  <meta name="description"
+    content="Book affordable air tickets and travel packages with Z9 Travels. Enjoy secure bookings, great deals, and top-notch customer service for your next journey." />
+  <meta name="keywords"
+    content="Z9 Travels, air tickets, cheap flights, travel packages, flight booking, tours, holidays, airline deals" />
   <meta name="author" content="Z9 Travels" />
 
   <!-- Canonical Tag -->
@@ -21,7 +23,8 @@
 
   <!-- Open Graph (Facebook, LinkedIn) -->
   <meta property="og:title" content="Z9 Travels | Affordable Air Tickets & Travel Packages" />
-  <meta property="og:description" content="Book affordable air tickets and travel packages with Z9 Travels. Enjoy secure bookings, great deals, and top-notch customer service." />
+  <meta property="og:description"
+    content="Book affordable air tickets and travel packages with Z9 Travels. Enjoy secure bookings, great deals, and top-notch customer service." />
   <meta property="og:image" content="https://www.z9airtravels.com/og-image.jpg" />
   <meta property="og:url" content="https://www.z9airtravels.com/" />
   <meta property="og:type" content="website" />
@@ -29,7 +32,8 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Z9 Travels | Affordable Air Tickets & Travel Packages" />
-  <meta name="twitter:description" content="Book affordable air tickets and travel packages with Z9 Travels. Enjoy secure bookings, great deals, and top-notch customer service." />
+  <meta name="twitter:description"
+    content="Book affordable air tickets and travel packages with Z9 Travels. Enjoy secure bookings, great deals, and top-notch customer service." />
   <meta name="twitter:image" content="https://www.z9airtravels.com/og-image.jpg" />
 
   <!-- Robots -->
@@ -63,6 +67,16 @@
         );
       }
     })(window.location);
+  </script>
+
+  <!-- Fix for Dynamic Import Chunk Loading Error -->
+  <script>
+    window.addEventListener('error', e => {
+      if (e.message && e.message.includes('Failed to fetch dynamically imported module')) {
+        console.warn('Dynamic import failed. Reloading page...');
+        window.location.reload();
+      }
+    });
   </script>
 </body>
 
