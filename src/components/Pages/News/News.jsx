@@ -50,6 +50,7 @@ const News = () => {
                                     src={item.image}
                                     alt={item.title}
                                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                                    loading="lazy"
                                 />
                                 <div className="absolute top-4 right-4 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
                                     {new Date(item.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}

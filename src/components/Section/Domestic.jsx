@@ -18,18 +18,18 @@ const Domestic = () => {
                 <div className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                     style={{ backgroundImage: "url('https://images.unsplash.com/photo-1586348943529-beaae6c28db9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')" }}>
                 </div>
-                
+
                 {/* Enhanced responsive hero content with consistent spacing */}
                 <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full flex flex-col items-center justify-center gap-4 sm:gap-5">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white px-5 lg:px-10 w-[400px] lg:w-auto">
-                        <span className="text-sky-600">Domestic</span> Tour Packages 
+                        <span className="text-sky-600">Domestic</span> Tour Packages
                     </h1>
                     <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mx-auto px-2">
                         Discover the hidden gems and natural wonders of Bangladesh with our expertly crafted tour packages
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2 w-full max-w-md">
-                        <button 
-                            onClick={scrollToPackages} 
+                        <button
+                            onClick={scrollToPackages}
                             className="cursor-pointer px-6 sm:px-8 py-2.5 sm:py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition duration-300 shadow-lg text-sm sm:text-base w-full sm:w-auto"
                         >
                             Explore Packages
@@ -39,21 +39,21 @@ const Domestic = () => {
                         </button>
                     </div>
                 </div>
-                
+
                 <div className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
-                    <svg 
-                        onClick={scrollToPackages} 
-                        className="cursor-pointer w-6 h-6 sm:w-8 sm:h-8 text-white" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        viewBox="0 0 24 24" 
+                    <svg
+                        onClick={scrollToPackages}
+                        className="cursor-pointer w-6 h-6 sm:w-8 sm:h-8 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
                     >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                     </svg>
                 </div>
             </section>
-            
+
             {/* Tour Packages Section */}
             <section id="domestic-tour-packages" className="py-12 sm:py-16 px-2 lg:px-4 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,7 +65,7 @@ const Domestic = () => {
                             Discover our most popular tour packages designed to showcase the diverse beauty of Bangladesh
                         </p>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                         {sliceTourPackages.map((tour) => (
                             <div key={tour.id} className="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl flex flex-col h-full">
@@ -74,12 +74,13 @@ const Domestic = () => {
                                         src={tour.image}
                                         alt={tour.title}
                                         className="w-full h-48 sm:h-56 object-cover transition-transform duration-500 hover:scale-105"
+                                        loading="lazy"
                                     />
                                     <div className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-blue-600 text-white px-2 sm:px-3 py-1 rounded-lg font-semibold text-sm sm:text-base">
                                         ৳{tour.price}
                                     </div>
                                 </div>
-                                
+
                                 <div className="p-4 sm:p-6 flex flex-col flex-grow">
                                     <div className="flex-grow">
                                         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
@@ -110,8 +111,8 @@ const Domestic = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <Link 
-                                        to={`/packages/domestic/${tour.packageId}`} 
+                                    <Link
+                                        to={`/packages/domestic/${tour.packageId}`}
                                         className="cursor-pointer text-center w-full py-2.5 sm:py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition duration-300 mt-auto text-sm sm:text-base"
                                     >
                                         View Details
@@ -120,16 +121,16 @@ const Domestic = () => {
                             </div>
                         ))}
                     </div>
-                    
-                    <Link 
-                        to='/packages/domestic' 
+
+                    <Link
+                        to='/packages/domestic'
                         className='flex items-center justify-center w-full sm:w-72 mx-auto text-white mt-8 sm:mt-10 px-5 py-2.5 sm:py-3 bg-blue-500 cursor-pointer rounded-xl transition-colors hover:bg-blue-800 duration-300 text-sm sm:text-base'
                     >
                         See More Packages
                     </Link>
                 </div>
             </section>
-            
+
             {/* Introduction Section */}
             <section className="py-12 sm:py-16 px-4 bg-white">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -139,6 +140,7 @@ const Domestic = () => {
                                 src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
                                 alt="Bangladesh Landscape"
                                 className="rounded-2xl shadow-xl w-full h-auto"
+                                loading="lazy"
                             />
                         </div>
                         <div className="order-1 md:order-2">

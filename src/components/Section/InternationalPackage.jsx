@@ -19,7 +19,7 @@ const InternationalPackage = () => {
                 <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                     style={{ backgroundImage: "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')" }}></div>
-                
+
                 {/* Enhanced responsive hero content with consistent spacing */}
                 <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full flex flex-col items-center justify-center py-10">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 px-5 w-[400px] lg:w-auto">
@@ -40,7 +40,7 @@ const InternationalPackage = () => {
                         </button>
                     </div>
                 </div>
-                
+
                 <div className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
                     <svg
                         onClick={scrollToPackages}
@@ -54,7 +54,7 @@ const InternationalPackage = () => {
                     </svg>
                 </div>
             </section>
-            
+
             {/* Tour Packages Section */}
             <section id='international-tour-packages' className="py-12 sm:py-16 px-2 lg:px-4 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -74,6 +74,7 @@ const InternationalPackage = () => {
                                         src={tour.image}
                                         alt={tour.title}
                                         className="w-full h-48 sm:h-56 object-cover transition-transform duration-500 hover:scale-105"
+                                        loading='lazy'
                                     />
                                     <div className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-blue-600 text-white px-2 sm:px-3 py-1 rounded-lg font-semibold text-sm sm:text-base">
                                         ৳{tour.price}
@@ -127,7 +128,7 @@ const InternationalPackage = () => {
                     </Link>
                 </div>
             </section>
-            
+
             {/* Introduction Section */}
             <section className="py-12 sm:py-16 px-4 bg-white">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -137,6 +138,7 @@ const InternationalPackage = () => {
                                 src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
                                 alt="International Travel"
                                 className="rounded-2xl shadow-xl w-full h-auto"
+                                loading='lazy'
                             />
                         </div>
                         <div className="order-1 md:order-2">

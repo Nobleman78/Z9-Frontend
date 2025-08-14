@@ -1,8 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import UseBlogs from "../../Hooks/UseBlogs";
-import Preloader from "../../Utility/Preloader";
-import UsePageLoading from "../../Hooks/UsePageLoading";
 
 const BlogDetails = () => {
     const [blogs] = UseBlogs()
@@ -10,8 +8,6 @@ const BlogDetails = () => {
     const [blog, setBlog] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-
-  
 
     useEffect(() => {
         const foundBlog = blogs.find(blog => blog._id === id);

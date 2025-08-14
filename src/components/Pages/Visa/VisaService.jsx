@@ -92,6 +92,7 @@ const VisaService = () => {
                                         loading='lazy'
                                         alt={country.CountryName}
                                         className="w-full h-48 object-cover"
+                                        
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
                                     <div className="absolute bottom-0 left-0 right-0 p-4">

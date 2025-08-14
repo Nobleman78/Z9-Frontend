@@ -88,6 +88,7 @@ const VisaDetailes = () => {
                                 src={country.image}
                                 alt={country.CountryName}
                                 className="w-full h-64 md:h-full object-cover"
+                                loading='lazy'
                             />
                         </div>
                         <div className="md:w-2/3 p-8">

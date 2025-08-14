@@ -40,7 +40,7 @@ const Benefits = () => {
                         {benefits.map((benefit, index) => (
                             <div key={index} className="text-center p-6 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 transition-all duration-300 hover:shadow-lg">
                                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-5">
-                                    <img src={benefit.icon} alt={benefit.title} className="w-8 h-8" />
+                                    <img src={benefit.icon} alt={benefit.title} loading="lazy" className="w-8 h-8" />
                                 </div>
                                 <h3 className="text-lg lg:text-xl font-bold text-gray-800 mb-3">{benefit.title}</h3>
                                 <p className="text-gray-600">{benefit.description}</p>

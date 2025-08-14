@@ -43,7 +43,7 @@ const Footer = () => {
                     {/* Logo Section */}
                     <div className="lg:col-span-1">
                         <div className="flex items-center mb-6">
-                            <img className="w-40 rounded-lg" src={logo} alt="Logo"  />
+                            <img className="w-40 rounded-lg" src={logo} alt="Logo" loading='lazy' />
                         </div>
                         <p className="mb-6">Your trusted partner for innovative solutions and exceptional service.</p>
 

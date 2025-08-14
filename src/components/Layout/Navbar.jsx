@@ -45,7 +45,7 @@ const Navbar = () => {
                 {/* Logo */}
                 <div className='flex items-center justify-between w-full lg:w-auto'>
                     <NavLink to='/'>
-                        <img src={logo} className='cursor-pointer w-15 lg:w-25 ' alt='logo' />
+                        <img src={logo} className='cursor-pointer w-15 lg:w-25 ' alt='logo' loading='lazy'/>
                     </NavLink>
                     {/* Mobile Menu Icon */}
                     <div className='lg:hidden text-3xl cursor-pointer' onClick={toggleMenu}>

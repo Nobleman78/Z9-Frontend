@@ -32,6 +32,7 @@ const TourPackages = () => {
                                     src={pack.image}
                                     alt={pack.title}
                                     className="w-full h-full object-cover"
+                                    loading="lazy"
                                 />
                                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 flex items-center">
                                     <FaStar className="text-yellow-500 mr-1" />
@@ -101,6 +102,7 @@ const TourPackages = () => {
                                     src={pack.image}
                                     alt={pack.title}
                                     className="w-full h-full object-cover"
+                                    loading="lazy"
                                 />
                                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 flex items-center">
                                     <FaStar className="text-yellow-500 mr-1" />

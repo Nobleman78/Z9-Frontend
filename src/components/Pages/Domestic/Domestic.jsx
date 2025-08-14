@@ -58,13 +58,13 @@ const Domestic = () => {
                     {domestic.map((pack) => (
                         <div
                             key={pack.packageId}
-                            className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-                        >
+                            className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
                             <div className="relative h-48 overflow-hidden">
                                 <img
                                     src={pack.image}
                                     alt={pack.title}
                                     className="w-full h-full object-cover"
+                                    loading="lazy"
                                 />
                                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 flex items-center">
                                     <FaStar className="text-yellow-500 mr-1" />
