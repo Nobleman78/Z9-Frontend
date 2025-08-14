@@ -65,7 +65,7 @@ const HeroSection = () => {
                                 loading={index === 0 ? 'eager' : 'lazy'}
                                 fetchPriority={index === 0 ? 'high' : 'auto'}
                                 alt={slide.alt}
-                                className='w-full lg:h-[500px] object-cover blur-sm transition-all duration-500 brightness-75'
+                                className='w-full lg:h-[500px] object-cover  transition-all duration-500 brightness-75'
                                 onLoad={(e) => {
                                     e.target.src = e.target.dataset.src;
                                     e.target.classList.remove('blur-sm');
