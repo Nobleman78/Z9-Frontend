@@ -29,11 +29,12 @@ function App() {
   return (
     <div className='flex flex-col min-h-screen overflow-x-hidden'>
       <SEO
-        title="Travel Agency"
+        title="Z9 Air Travels - Travel Agency"
         description="Best travel agency offering visa services, air tickets, and tour packages worldwide."
         keywords="travel, visa, air ticket, tour packages, international travel"
         url="/"
       />
+
       {/* Only restore scroll AFTER preloader is done */}
       {restoreScroll && <ScrollRestoration />}
 
