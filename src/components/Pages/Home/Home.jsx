@@ -4,6 +4,7 @@ import Benefits from "../../Section/Benefits";
 import Domestic from "../../Section/Domestic";
 import InternationalPackage from "../../Section/InternationalPackage";
 import OurServices from "../../Section/OurServices";
+import Appricated from "../../Section/Appricated";
 
 const Home = () => {
     return (
@@ -46,6 +47,7 @@ const Home = () => {
                 <InternationalPackage />
                 <Domestic />
                 <Benefits />
+                <Appricated/>
             </main>
         </div>
     );

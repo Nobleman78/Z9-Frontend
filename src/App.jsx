@@ -33,6 +33,7 @@ function App() {
       {restoreScroll && <ScrollRestoration />}
 
       <Header />
+      <marquee className='text-lg italic text-orange-700' behavior="" direction="">" First Govt accredited Travel Agency in Gharisar, Naria, Shariatpur, Dhaka, Bangladesh "</marquee>
       <Navbar />
       <main className='flex-grow'>
         {loading && <Preloader />}

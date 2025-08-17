@@ -35,7 +35,9 @@ const HeroSection = () => {
                 {/* Main heading with responsive typography */}
                 <h1 className="text-[1.75rem] sm:text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] xl:text-[4rem] 2xl:text-[4rem] font-light text-white drop-shadow-lg mb-3 sm:mb-4 md:mb-5 lg:mb-6 tracking-wide leading-tight sm:leading-tight md:leading-tight lg:leading-tight"> 
                     <span className="block mt-1 sm:mt-1 md:mt-2">_Discover Your Next Adventure_</span>
-                </h1>   
+                </h1> 
+                {/* Tag Line */}
+
             </div>
             <main className='relative w-full '>
 

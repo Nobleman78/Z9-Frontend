@@ -62,7 +62,7 @@ const AirTicket = () => {
                     <div className="container mx-auto px-4 relative z-10">
                         <div className="max-w-3xl mx-auto text-center">
                             <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
-                                Global <span className="text-purple-600">Ticket</span> Services
+                                 <span className="text-purple-600">Ticket</span> Services
                             </h1>
                             <p className="lg:text-xl text-blue-100 mb-8">
                                 Buy Ticket and Explore Different Countries.
@@ -88,14 +88,17 @@ const AirTicket = () => {
                         <p className="text-md md:text-2xl text-gray-600">
                             For now, please visit our office for bookings.
                         </p>
-                        <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href="https://www.google.com/maps/place/Z9+Air+Travels/@23.2725026,90.4771176,16z/"
-                            className="mt-6 px-8 py-3 bg-sky-600 text-white rounded-full shadow-md hover:bg-sky-700 transition duration-300"
-                        >
-                            Find Our Office
-                        </a>
+                        <div className="flex gap-3 items-center justify-center">
+                            <button className="mt-6 px-8 py-3 bg-sky-600 text-white rounded-full shadow-md hover:bg-sky-700 transition duration-300">+8801710-411019</button>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://www.google.com/maps/place/Z9+Air+Travels/@23.2725026,90.4771176,16z/"
+                                className="mt-6 px-8 py-3 bg-sky-600 text-white rounded-full shadow-md hover:bg-sky-700 transition duration-300"
+                            >
+                                Find Our Office
+                            </a>
+                        </div>
                     </div>
                 </div>
             </main>

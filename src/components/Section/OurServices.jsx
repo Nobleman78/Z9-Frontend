@@ -91,7 +91,7 @@ const OurServices = () => {
                     <p className="text-white max-w-sm lg:max-w-2xl mx-auto text-md lg:text-lg">
                         Comprehensive travel solutions designed to make your journey seamless and unforgettable
                     </p>
-                    <div className="mt-6 w-24 h-1 bg-gradient-to-r from-orange-300 via-orange-400 to-orange-300 mx-auto rounded-full"></div>
+                    {/* <div className="mt-6 w-24 h-1 bg-gradient-to-r from-orange-300 via-orange-400 to-orange-300 mx-auto rounded-full"></div> */}
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-8">

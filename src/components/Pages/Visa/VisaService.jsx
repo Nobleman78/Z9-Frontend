@@ -18,7 +18,7 @@ const VisaService = () => {
                 <title>Visa Services | Z9 Air Travels</title>
                 <meta
                     name="description"
-                    content="Explore global visa services with Z9 Air Travels. Get guidance for visa requirements, fees, and documentation for popular international destinations."
+                    content="Explore  visa services with Z9 Air Travels. Get guidance for visa requirements, fees, and documentation for popular international destinations."
                 />
                 <meta
                     name="keywords"
@@ -58,7 +58,7 @@ const VisaService = () => {
                 <div className="absolute inset-0 bg-black opacity-40"></div>
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
-                        Global <span className='text-purple-600'>Visa</span> Services
+                         <span className='text-purple-600'>Visa</span> Services
                     </h1>
                     <p className="lg:text-xl text-blue-100 mb-8">
                         Expert guidance for your international travel needs

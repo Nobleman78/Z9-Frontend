@@ -48,7 +48,7 @@ const Contact = () => {
                         <div className='flex flex-col gap-3 mt-7 text-md'>
                             <p className='flex items-center gap-3'><GrLocation /> Gharisar, naria, shariatpur, Dhaka, Bangladesh</p>
                             <p className='flex items-center gap-3'><TbPhoneCall /> +8801710-411019</p>
-                            <p className='flex items-center gap-3'><AiOutlineMail />z9net@hotmail.com</p>
+                            <p className='flex items-center gap-3'><AiOutlineMail />z9airtravels@gmail.com</p>
                         </div>
                         <form onSubmit={handleContact} className=''>
                             <div className='flex flex-col md:flex-row mt-10 justify-between items-center gap-4'>
