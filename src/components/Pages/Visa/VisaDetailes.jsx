@@ -230,8 +230,10 @@ const VisaDetailes = () => {
                 </div>
                 <div className='bg-white rounded-xl shadow-lg overflow-hidden mt-12 p-8 '>
                     <h2 className='text-2xl font-semibold mb-2 text-red-600'>Important Notes</h2>
-                    <p className='text-justify'>Please contact the Visa department for Document processing after the payment. Visa rate may change without any prior notice.</p>
+                    <p className='text-justify tracking-tighter lg:text-lg'>Please contact the Visa department for Document processing after the payment. Visa rate may change without any prior notice.</p>
+               
                 </div>
+                <button className='mt-5 bg-blue-500 px-5 py-3 rounded-xl text-white'>+8801710-411019</button>
             </div>
         </div>
     );
