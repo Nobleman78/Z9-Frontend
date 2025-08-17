@@ -49,7 +49,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement:<div>Something went wrong please reload the page</div>,
+    errorElement:<div className='text-center mt-5 '>Something went wrong please reload the page</div>,
     children: [
       {
         index: true,
