@@ -26,20 +26,19 @@ function App() {
   }, [loading]);
 
   return (
-    <div className='flex flex-col min-h-screen overflow-x-hidden'>
-
-
-      {/* Only restore scroll AFTER preloader is done */}
-      {restoreScroll && <ScrollRestoration />}
-
+    <>
       <Header />
       <Navbar />
-      <main className='flex-grow'>
-        {loading && <Preloader />}
-        <Outlet />
-      </main>
-      <Footer />
-    </div>
+      <div className='flex flex-col min-h-screen overflow-x-hidden'>
+        {/* Only restore scroll AFTER preloader is done */}
+        {restoreScroll && <ScrollRestoration />}
+        <main className='flex-grow'>
+          {loading && <Preloader />}
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }
 

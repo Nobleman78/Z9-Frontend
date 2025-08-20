@@ -19,18 +19,18 @@ const Navbar = () => {
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
-        setUserDropdown(false); // Close user dropdown when toggling menu
+        setUserDropdown(false); 
     };
 
     const handleMobileLinkClick = () => {
         setMenuOpen(false);
         setPackageDropDown(false);
-        setUserDropdown(false); // Close user dropdown when clicking links
+        setUserDropdown(false); 
     };
 
     const handleUserClick = () => {
         setUserDropdown(!userDropdown);
-        setPackageDropDown(false); // Close package dropdown when opening user dropdown
+        setPackageDropDown(false); 
     };
 
     const handleLogout = () => {
