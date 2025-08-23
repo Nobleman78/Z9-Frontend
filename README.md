@@ -11,7 +11,6 @@
 3. Express.js
 4. MongoDB
 # Getting Start 
-  # Clone 
  1.  https://github.com/Nobleman78/Z9-Frontend.git
  2.  npm i
  3.  npm run dev
