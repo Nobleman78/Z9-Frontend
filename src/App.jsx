@@ -1,4 +1,4 @@
-import { Outlet, ScrollRestoration } from 'react-router-dom';
+import { Outlet, ScrollRestoration, useLocation } from 'react-router-dom';
 import Footer from './components/Layout/Footer';
 import Navbar from './components/Layout/Navbar';
 import Header from './components/Layout/Header';
@@ -24,11 +24,12 @@ function App() {
       window.scrollTo(0, 0);
     }
   }, [loading]);
-
+  const location = useLocation()
+  const isDashBoardRoute = location.pathname.startsWith('/dashboard')
   return (
     <>
-      <Header />
-      <Navbar />
+      {!isDashBoardRoute && <Header />}
+      {!isDashBoardRoute && <Navbar />}
       <div className='flex flex-col min-h-screen overflow-x-hidden'>
         {/* Only restore scroll AFTER preloader is done */}
         {restoreScroll && <ScrollRestoration />}
@@ -36,7 +37,7 @@ function App() {
           {loading && <Preloader />}
           <Outlet />
         </main>
-        <Footer />
+        {!isDashBoardRoute && <Footer />}
       </div>
     </>
   );
