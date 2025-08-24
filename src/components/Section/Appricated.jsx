@@ -31,7 +31,7 @@ const Appricated = () => {
                         />
                     </div>
                 </div>
-                <h2 className='text-2xl italic mt-10 bg-white py-3 rounded text-orange-700 flex justify-center' behavior="" direction="">" 1st Govt accredited Travel Agency in Shariatpur "</h2>
+                <h2 className='text-2xl italic mt-10 bg-white py-3 rounded text-orange-700 flex justify-center' behavior="" direction="">" 1ˢᵗ Govt accredited Travel Agency in Shariatpur "</h2>
             </div>
         </section>
     );
